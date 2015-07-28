@@ -1,0 +1,49 @@
+<html ng-app>
+<head>
+    <meta charset="utf-8" />    
+    <title>AngularJS Tutorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+</head>
+
+<body>
+    <div id="app-container">
+        <div id="app-header">
+            <div class="xl-box">
+                <h1>AngularJS Tutorial</h1>
+            </div>
+        </div>
+        <div id="app-content">
+            <div class="xl-box">
+                
+                <section>
+                    <div class="xl-box">
+                        <h3>ng-search directive</h3>
+                        <label>Input Field:</label>
+                        <input type="text" ng-model="search">
+                        
+                        <div ng-show="search">
+                            <p>Du suchst gerade nach: {{ search }}</p>
+                            <p><b>Transformed:</b> {{ search.toUpperCase() + "!" }}</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="xl-box">
+                        <h3>For..In Loop</h3>
+                        <table>
+                            <tr ng-repeat="article in ['Pizza Margherita', 'Pizza Tonno', 'Pizza Sardinia', 'Pizza Hawaii', 'Pizza Prosciutto']">
+                                <td>{{ article }}</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
